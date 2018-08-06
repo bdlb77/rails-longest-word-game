@@ -19,10 +19,10 @@ class GamesController < ApplicationController
     @result = word_check["found"]
     @grid.split('')
     @word.split('').each do |l| 
-      if @grid.include?(l) && @result == true
-        @yay = "#{@word} is real!"
-      elsif @grid.include?(l) && @result == false
-        @yay = "#{@word} is not a valid word"
+      if @grid.include?(l) && @result == false
+        @yay = "#{@word} is not real!!"
+      elsif @grid.include?(l) && @result == true
+        @yay = "#{@word} is REAL!"
       elsif !@grid.include?(l)
         @yay = "#{@word} is not from the grid."
       end
